@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCFrontTask1</title>
+</head>
+
+<style>
+  body {
+    font-family: Arial;
+    background-color: #FFFF99;
+    color: #000000;
+  }
+
+  ul {
+    margin: 50px auto;
+    padding: 0px;
+    max-width: 500px;
+    min-width: 180px;
+    list-style: none;
+    white-space: nowrap;
+  }
+
+  li {
+    padding: 5px;
+    background-color: #EEEEEE;
+    box-shadow: #999999 1.8px 1.8px 2.7px;
+    border: 1px solid #999999;
+    margin-bottom: -1px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* 2n - it's an even element*/
+
+  li:nth-child(2n) {
+    margin-left: 20px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  /* 2n - it's an odd element */
+
+  li:nth-child(2n+1) {
+    margin-right: 20px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  li:first-child {
+    border-radius: 5px 5px 0 5px;
+  }
+
+  li:last-child {
+    border-radius: 0 5px 5px 5px;
+  }
+
+  span:nth-child(2n+1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  span:nth-child(2n) {
+    font-weight: bold;
+    padding-left: 5px;
+  }
+
+  li:nth-child(2n+1) span:nth-child(2n+1) {
+    color: #666666;
+  }
+
+  li:nth-child(2n) span:nth-child(2n) {
+    color: #666666;
+  }
+
+  @media only screen and (max-width: 600px) {
+    ul {
+      width: 85%;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    ul {
+      width: 50%;
+    }
+  }
+</style>
+
+<body>
+  <ul>
+    <li>
+      <span>Short text</span>
+      <span>Is short</span>
+    </li>
+    <li>
+      <span>A little bit longer text</span>
+      <span>Is longer</span>
+    </li>
+    <li>
+      <span>Also a little bit longer</span>
+      <span>Yes it is</span>
+    </li>
+    <li>
+      <span>A long text is here, totally for no reason</span>
+      <span>Is long.</span>
+    </li>
+    <li>
+      <span>A long text is here also, for the same reason</span>
+      <span>Is long too!</span>
+    </li>
+    <li>
+      <span>OK</span>
+      <span>OK</span>
+    </li>
+  </ul>
+</body>
+
+</html>
